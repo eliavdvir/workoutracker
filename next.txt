@@ -1,0 +1,53 @@
+workout state
+
+array of objects (categories)
+
+category object has:
+
+name,
+icon link,
+exercises (array of objects)
+
+exercise object has:
+categoryId ?
+name 
+details
+sets (array of objects)
+
+set object has:
+reps
+equipment (object)
+
+equipment object has:
+type: 'none' , ' weights' , 'bands'
+chosenBand: 
+weight amount:
+weight type: kg, lbs
+
+
+components:
+login
+workout
+categoryLayout
+categoryClosed
+categoryOpened
+add category
+exerciseClosed
+addExercise
+exerciseOpened
+miniSet
+setDetails
+weights
+bands
+categoryForm
+exerciseForm
+
+
+colors:
+314B5B - category & login text stroke
+C3E8FF - neon cyan
+
+559DC9 - return button & chosen set & set text color
+E5F5FF - reps
+155074 - stroke exercise text, return button stroke
+202F3A - stroke set
