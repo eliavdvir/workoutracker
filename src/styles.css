@@ -294,7 +294,7 @@
 }
 .exercise-page {
   position: absolute;
-  height: 90vh;
+  height: 85vh;
   width: 95vw;
   border-radius: 1.9375rem;
   border: 5px solid var(--neon-color);
@@ -387,7 +387,7 @@
 }
 .exercise-set-extras-container {
   position: absolute;
-  top: 5%;
+  top: 0;
   width: 18.75%;
   height: 40%;
   z-index: 3;
@@ -855,7 +855,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 20%;
+  height: 30%;
   width: 60%;
   border-radius: 1.25rem;
   border: 3px solid #c3e8ff;
@@ -1078,7 +1078,7 @@
   justify-content: center;
 }
 .category-input-container span {
-  padding-top: 15%;
+  padding-top: 5%;
   width: 80%;
   text-align: center;
   font-size: 1.5rem;
@@ -1784,4 +1784,12 @@
   font-weight: 400;
   line-height: normal;
   text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+.no-select {
+  user-select: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
 }

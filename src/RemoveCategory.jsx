@@ -33,6 +33,7 @@ function RemoveCategory({ categoryRemover, setRemoveDivOpen }) {
           className="weight-input-confirm text2"
           onClick={() => {
             categoryRemover()
+            closeDiv()
           }}
         >
           confirm

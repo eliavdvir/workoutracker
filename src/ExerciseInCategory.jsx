@@ -35,7 +35,7 @@ function ExerciseInCategory({ exercise, resetCategoryHeight }) {
 
   return (
     <div
-      className="exercise-in-category-container"
+      className="exercise-in-category-container no-select"
       ref={exerciseDivRef}
       onClick={handleClick}
       onTouchStart={handleTouchStart}

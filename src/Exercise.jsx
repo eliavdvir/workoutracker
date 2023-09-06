@@ -273,6 +273,7 @@ function Exercise() {
           <div className="in-exercise-extras-div">
             <div className="in-exercise-extras-band">
               <Select
+                isSearchable={false}
                 options={options}
                 components={{
                   Option: CustomOption,
@@ -312,11 +313,14 @@ function Exercise() {
           return
         </div>
         <div className="flexbox category-name">
-          <img
-            className="exercise-category-image"
-            src="https://i.imgur.com/sK3ARIY.png"
-            alt=""
-          />
+          {category.categorySrc.length > 2 && (
+            <img
+              className="exercise-category-image"
+              src={category?.categorySrc}
+              alt=""
+            />
+          )}
+
           <h1 className="text1 exercise-category-name-text">
             {category?.categoryName}
           </h1>
@@ -337,7 +341,7 @@ function Exercise() {
             {exercise?.sets.map((set) => {
               return (
                 <div
-                  key={set.setId}
+                  key={`${set.setId}InExercise`}
                   onClick={() => {
                     setChosenSet(set)
                   }}
