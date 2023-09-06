@@ -420,7 +420,7 @@
   position: absolute;
   width: 12.5vmin;
   height: 12.5vmin;
-  bottom: 10%;
+  bottom: 12.5%;
   border-radius: 20%;
   border: 1px solid #202f3a;
   background: radial-gradient(50% 50% at 50% 50%, #a0a0a0 0%, #c3c3c3 100%);
