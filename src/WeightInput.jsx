@@ -33,6 +33,7 @@ function WeightInput({ setWeightInputOpen, setChosenSet, chosenSet }) {
           type="number"
           className="weight-input-number text3"
           value={weight}
+          inputmode="numeric"
           onChange={(e) => {
             const val = e.target.value.includes(".")
               ? parseFloat(e.target.value)

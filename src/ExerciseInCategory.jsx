@@ -21,8 +21,7 @@ function ExerciseInCategory({ exercise, resetCategoryHeight }) {
 
   const handleTouchEnd = () => {
     const endTime = new Date().getTime()
-    if (endTime - touchStartTime >= 2000) {
-      console.log("Held for 2 seconds")
+    if (endTime - touchStartTime >= 1000) {
       setDeleteExerciseOpen(true)
     }
     setTouchStartTime(null)

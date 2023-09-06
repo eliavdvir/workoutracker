@@ -36,6 +36,10 @@ const customStyles = {
     ...provided,
     height: "40px",
   }),
+  menu: (provided) => ({
+    ...provided,
+    zIndex: 10,
+  }),
 }
 
 function Exercise() {
@@ -412,9 +416,34 @@ function Exercise() {
               ></div>
 
               <div className="in-exercise-extras-texts">
-                <div className="text2 in-exercise-extras-text">none</div>
-                <div className="text2 in-exercise-extras-text">weights</div>
-                <div className="text2 in-exercise-extras-text">bands</div>
+                <div
+                  className={`
+                    text2 in-exercise-extras-text 
+                    ${chosenSet.isNone ? "in-exercise-extras-text-chosen" : ""}
+                  `}
+                >
+                  none
+                </div>
+                <div
+                  className={`
+                    text2 in-exercise-extras-text 
+                    ${
+                      chosenSet.isWeights
+                        ? "in-exercise-extras-text-chosen"
+                        : ""
+                    }
+                  `}
+                >
+                  weights
+                </div>
+                <div
+                  className={`
+                  text2 in-exercise-extras-text 
+                  ${chosenSet.isBand ? "in-exercise-extras-text-chosen" : ""}
+                `}
+                >
+                  bands
+                </div>
               </div>
               <div className="left-side-circle" ref={leftCircle}></div>
               <div className="left-side-circle-bg"></div>

@@ -35,6 +35,7 @@ function SetInExercise({ set, chosenSet }) {
                 ? "set-extras-img"
                 : "set-extras-img-band"
             }
+            style={{ top: "-30%" }}
             src={url}
           />
           {url === "https://i.imgur.com/7ji48DR.png" && (

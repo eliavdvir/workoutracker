@@ -609,6 +609,12 @@
   color: #ddd;
   font-size: 0.75rem;
 }
+.in-exercise-extras-text-chosen {
+  position: relative;
+  top: -5px;
+  color: var(--neon-color);
+  font-size: 0.9rem;
+}
 .exercise-extras-ball-middle {
   position: absolute;
   left: 50%;
@@ -1323,6 +1329,7 @@
   color: #fff;
   margin-bottom: 20px;
   text-indent: 5px;
+  box-sizing: border-box;
 }
 
 .workout-input-name:focus {
