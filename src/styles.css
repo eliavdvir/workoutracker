@@ -294,7 +294,7 @@
 }
 .exercise-page {
   position: absolute;
-  height: 78vh;
+  height: 79vh;
   width: 95vw;
   border-radius: 1.9375rem;
   border: 5px solid var(--neon-color);
@@ -675,10 +675,11 @@
 }
 .in-exercise-extras-div {
   position: absolute;
-  top: 20%;
+  top: 22.5%;
   left: 10%;
   width: 80%;
   height: 50%;
+  z-index: 10;
 }
 .in-exercise-extras-weights {
   position: absolute;
@@ -798,7 +799,7 @@
   border-radius: 0.375rem;
   border: 2px solid #ffbaba;
   width: 50%;
-  height: 25%;
+  height: 40%;
   color: #ffeded;
   display: flex;
   justify-content: center;
