@@ -294,7 +294,7 @@
 }
 .exercise-page {
   position: absolute;
-  height: 85vh;
+  height: 78vh;
   width: 95vw;
   border-radius: 1.9375rem;
   border: 5px solid var(--neon-color);

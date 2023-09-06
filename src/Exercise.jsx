@@ -36,10 +36,6 @@ const customStyles = {
     ...provided,
     height: "40px",
   }),
-  menu: (provided) => ({
-    ...provided,
-    zIndex: 25,
-  }),
 }
 
 function Exercise() {
