@@ -420,7 +420,7 @@
   position: absolute;
   width: 12.5vmin;
   height: 12.5vmin;
-  bottom: 12.5%;
+  bottom: 10%;
   border-radius: 20%;
   border: 1px solid #202f3a;
   background: radial-gradient(50% 50% at 50% 50%, #a0a0a0 0%, #c3c3c3 100%);
@@ -469,7 +469,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -10%;
+  bottom: -15%;
   color: #dddddd;
   font-size: 0.85rem;
 }
@@ -478,7 +478,7 @@
   width: 100%;
   background-color: #9a9a9abd;
   height: 1px;
-  bottom: -10%;
+  bottom: -15%;
   border-radius: 50%;
 }
 .in-exercise-reps {

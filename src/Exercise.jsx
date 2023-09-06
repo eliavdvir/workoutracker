@@ -38,7 +38,7 @@ const customStyles = {
   }),
   menu: (provided) => ({
     ...provided,
-    zIndex: 10,
+    zIndex: 25,
   }),
 }
 
