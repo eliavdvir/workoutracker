@@ -1,13 +1,11 @@
 import { useEffect, useRef, useState } from "react"
 import { useContext } from "react"
-import { DataContext } from "./DataProvider"
 import { HistoryContext } from "./DataProvider"
 
 function DataExporter({ setExportIsChosen }) {
   const containerRef = useRef(null)
   const inputRef = useRef(null)
   const [copyText, setCopyText] = useState("copy")
-  const { state } = useContext(DataContext)
   const { historyState } = useContext(HistoryContext)
   const [exportString, setExportString] = useState("")
 

@@ -6,6 +6,7 @@ import RemoveExercise from "./RemoveExercise"
 function ExerciseInCategory({ exercise, resetCategoryHeight }) {
   const [touchStartTime, setTouchStartTime] = useState(null)
   const [deleteExerciseOpen, setDeleteExerciseOpen] = useState(false)
+  const [initialScrollPos, setInitialScrollPos] = useState(0)
   const exerciseDivRef = useRef(null)
   const navigate = useNavigate()
 
@@ -17,11 +18,17 @@ function ExerciseInCategory({ exercise, resetCategoryHeight }) {
   const handleTouchStart = () => {
     const startTime = new Date().getTime()
     setTouchStartTime(startTime)
+    setInitialScrollPos(window.scrollY)
   }
 
   const handleTouchEnd = () => {
     const endTime = new Date().getTime()
-    if (endTime - touchStartTime >= 1000) {
+    const currentScrollPos = window.scrollY
+
+    if (
+      Math.abs(initialScrollPos - currentScrollPos) < 10 &&
+      endTime - touchStartTime >= 1000
+    ) {
       setDeleteExerciseOpen(true)
     }
     setTouchStartTime(null)

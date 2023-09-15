@@ -21,8 +21,16 @@ function ExerciseInputs({ setExerciseInputsOpen, exercise, categoryId }) {
   }
 
   function dispatchExerciseIdChange(actualExerciseInfo) {
+    const updatedSets = exercise.sets.map((set) => {
+      return {
+        ...set,
+        exerciseId: actualExerciseInfo.id,
+      }
+    })
+
     const updatedExercise = {
       ...exercise,
+      sets: updatedSets,
       exerciseId: actualExerciseInfo.id,
       exerciseName: actualExerciseInfo.name,
     }
@@ -71,6 +79,9 @@ function ExerciseInputs({ setExerciseInputsOpen, exercise, categoryId }) {
   }
 
   useEffect(() => {
+    if (exercise.exerciseName === "New Exercise") {
+      nameRef.current.select()
+    }
     nameRef.current.focus()
     detailsRef.current.value = exercise.exerciseDetails
   }, [])

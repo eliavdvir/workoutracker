@@ -30,7 +30,7 @@
   background: radial-gradient(50% 50% at 50% 50%, #646464 0%, #414141 100%);
 }
 .animate-height {
-  transition: height 0.5s ease-in-out;
+  transition: height 0.5s linear;
 }
 .flexbox {
   display: flex;
@@ -1665,7 +1665,7 @@
 }
 .matching-divs-container {
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: 50%;
   transform: translateX(-50%);
   height: 45%;
@@ -1673,6 +1673,7 @@
   z-index: 1000;
   border: 2px solid #c0c0c0;
   background: #888;
+  overflow-y: auto;
 }
 .matching-div {
   position: relative;
@@ -1800,4 +1801,17 @@
   -khtml-user-select: none; /* Konqueror HTML */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+.workout-time {
+  position: absolute;
+  top: 0.5%;
+  width: 97.5%;
+  text-align: center;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.workout-time-svg {
+  margin-right: 5px;
 }

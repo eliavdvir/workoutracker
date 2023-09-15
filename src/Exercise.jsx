@@ -4,7 +4,6 @@ import { HistoryContext } from "./DataProvider"
 import { useNavigate, useParams } from "react-router-dom"
 import SetInExercise from "./SetInExercise"
 import Select from "react-select"
-import bands from "./bands.json"
 import WeightInput from "./WeightInput"
 import ExerciseInputs from "./ExerciseInputs"
 

@@ -31,6 +31,9 @@ function CategoryInputs({ setCategoryInputsOpen, category }) {
   useEffect(() => {
     nameRef.current.value = category.categoryName
     srcRef.current.value = category.categorySrc
+    if (category.categoryName === "new category") {
+      nameRef.current.select()
+    }
     nameRef.current.focus()
 
     function handleClickOutside(event) {
