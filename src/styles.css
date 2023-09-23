@@ -6,6 +6,9 @@
   --secondary-stroke: #155074; /* stroke exercise text, return button stroke */
   --set-stroke: #202f3a; /* stroke set div */
 }
+body {
+  overflow: hidden;
+}
 .text1 {
   font-family: "Calistoga", cursive;
   color: #ffffff;
