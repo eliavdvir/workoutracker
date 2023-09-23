@@ -71,6 +71,7 @@ body {
   width: 100vw;
   height: 94vh;
   overflow-y: auto;
+  padding-bottom: 6vh;
 }
 .category-div-closed {
   position: relative;
@@ -1292,6 +1293,7 @@ body {
   height: 94vh;
   overflow-y: auto;
   overflow-x: hidden;
+  padding-bottom: 6vh;
 }
 .workout-input {
   position: absolute;
