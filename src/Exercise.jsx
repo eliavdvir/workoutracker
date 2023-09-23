@@ -46,6 +46,8 @@ function Exercise() {
   const [weightInputOpen, setWeightInputOpen] = useState(false)
   const [exerciseInputsOpen, setExerciseInputsOpen] = useState(false)
   const [highscore, setHighscore] = useState("-")
+  const [previous, setPrevious] = useState("-")
+  const [showHighscore, setShowHighscore] = useState(true)
 
   const category = state.categories.find((cat) =>
     cat.exercises.some((ex) => ex.exerciseId === exerciseId)
@@ -89,6 +91,8 @@ function Exercise() {
   useEffect(() => {
     if (chosenSet) {
       let highest = 0
+      let previous = 0
+      let previousDone = false
       const chosenSetIndex = exercise.sets.findIndex(
         (set) => set.setId === chosenSet.setId
       )
@@ -103,6 +107,10 @@ function Exercise() {
               ) {
                 const matchingSet = historyExercise.sets[chosenSetIndex]
                 if (chosenSet.isNone && matchingSet.isNone) {
+                  if (!previousDone) {
+                    previous = matchingSet.reps
+                    previousDone = true
+                  }
                   if (matchingSet.reps > highest) {
                     highest = matchingSet.reps
                   }
@@ -112,6 +120,10 @@ function Exercise() {
                   matchingSet.isKG === chosenSet.isKG &&
                   matchingSet.weight === chosenSet.weight
                 ) {
+                  if (!previousDone) {
+                    previous = matchingSet.reps
+                    previousDone = true
+                  }
                   if (matchingSet.reps > highest) {
                     highest = matchingSet.reps
                   }
@@ -120,6 +132,10 @@ function Exercise() {
                   matchingSet.isBand &&
                   chosenSet.band === matchingSet.band
                 ) {
+                  if (!previousDone) {
+                    previous = matchingSet.reps
+                    previousDone = true
+                  }
                   if (matchingSet.reps > highest) {
                     highest = matchingSet.reps
                   }
@@ -130,7 +146,9 @@ function Exercise() {
         })
       })
       let highestStr = String(highest)
+      let previousStr = String(previous)
       setHighscore(highestStr)
+      setPrevious(previousStr)
 
       dispatch({
         type: "UPDATE_SET",
@@ -469,11 +487,18 @@ function Exercise() {
         <div className="in-exercise-bottom-section">
           {chosenSet && (
             <>
-              <div className="in-exercise-highscore-div">
+              <div
+                className="in-exercise-highscore-div"
+                onClick={() => {
+                  setShowHighscore((val) => !val)
+                }}
+              >
                 <div className="highscore-container">
                   <div className="highscore-container-line">
                     <img src="https://i.imgur.com/TbOMtqw.png" alt="" />
-                    <div className="highscore-text-word text3">highest</div>
+                    <div className="highscore-text-word text3">
+                      {showHighscore ? "highscore" : "previous"}
+                    </div>
                     <svg
                       className="question-mark-highscore"
                       xmlns="http://www.w3.org/2000/svg"
@@ -493,7 +518,9 @@ function Exercise() {
                       />
                     </svg>
                   </div>
-                  <div className="highscore-text text3">{highscore}</div>
+                  <div className="highscore-text text3">
+                    {showHighscore ? highscore : previous}
+                  </div>
                 </div>
               </div>
               <div className="in-exercise-delete-exercise-div">
