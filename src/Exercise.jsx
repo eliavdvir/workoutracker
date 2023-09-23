@@ -150,8 +150,19 @@ function Exercise() {
     if (exercise.sets.length === 0) {
       isZeroBefore = true
     }
+
+    do {
+      setId = Math.floor(Math.random() * 10000) + 1
+    } while (
+      categories.some((category) =>
+        category.exercises.some((exercise) =>
+          exercise.sets.some((set) => set.setId === setId)
+        )
+      )
+    )
+
     const newSet = {
-      setId: crypto.randomUUID(),
+      setId,
       exerciseId: exercise.exerciseId,
       categoryId: category.categoryId,
       reps: 0,

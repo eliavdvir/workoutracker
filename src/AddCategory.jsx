@@ -2,15 +2,23 @@ import { useContext } from "react"
 import { DataContext } from "./DataProvider"
 
 function AddCategory() {
-  const { dispatch } = useContext(DataContext)
+  const { state, dispatch } = useContext(DataContext)
 
   function addNewCategory() {
+    let categoryId
+    do {
+      categoryId = Math.floor(Math.random() * 1000) + 1
+    } while (
+      state.categories.some((category) => category.categoryId === categoryId)
+    )
+
     const newCategory = {
       categoryName: "new category",
       categorySrc: "",
-      categoryId: crypto.randomUUID(),
+      categoryId,
       exercises: [],
     }
+
     dispatch({ type: "ADD_CATEGORY", payload: newCategory })
   }
 

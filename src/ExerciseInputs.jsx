@@ -59,7 +59,11 @@ function ExerciseInputs({ setExerciseInputsOpen, exercise, categoryId }) {
     )
 
     if (existsAndNameChanged) {
-      theId = crypto.randomUUID()
+      do {
+        theId = Math.floor(Math.random() * 100000) + 1
+      } while (
+        historyState.exercises.some((exercise) => exercise.exerciseId === theId)
+      )
     }
 
     const updatedExercise = {
