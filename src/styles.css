@@ -6,9 +6,7 @@
   --secondary-stroke: #155074; /* stroke exercise text, return button stroke */
   --set-stroke: #202f3a; /* stroke set div */
 }
-body {
-  overflow: hidden;
-}
+
 .text1 {
   font-family: "Calistoga", cursive;
   color: #ffffff;
@@ -71,8 +69,6 @@ body {
   width: 100vw;
   height: 94vh;
   overflow-y: auto;
-  padding-bottom: 6vh;
-  margin-top: 6vh;
 }
 .category-div-closed {
   position: relative;
@@ -1294,8 +1290,6 @@ body {
   height: 94vh;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-bottom: 6vh;
-  margin-top: 6vh;
 }
 .workout-input {
   position: absolute;
