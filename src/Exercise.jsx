@@ -155,7 +155,7 @@ function Exercise() {
     do {
       setId = (Math.floor(Math.random() * 10000) + 1).toString()
     } while (
-      categories.some((category) =>
+      state.categories.some((category) =>
         category.exercises.some((exercise) =>
           exercise.sets.some((set) => set.setId === setId)
         )
