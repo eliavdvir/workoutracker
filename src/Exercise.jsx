@@ -151,6 +151,7 @@ function Exercise() {
       isZeroBefore = true
     }
 
+    let setId
     do {
       setId = (Math.floor(Math.random() * 10000) + 1).toString()
     } while (
