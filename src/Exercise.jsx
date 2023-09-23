@@ -152,7 +152,7 @@ function Exercise() {
     }
 
     do {
-      setId = Math.floor(Math.random() * 10000) + 1
+      setId = (Math.floor(Math.random() * 10000) + 1).toString()
     } while (
       categories.some((category) =>
         category.exercises.some((exercise) =>

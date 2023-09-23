@@ -16,7 +16,7 @@ function CategoryOpened(props) {
   function addExercise() {
     let exerciseId
     do {
-      exerciseId = Math.floor(Math.random() * 100000) + 1
+      exerciseId = (Math.floor(Math.random() * 100000) + 1).toString()
     } while (
       historyState.exercises.some(
         (exercise) => exercise.exerciseId === exerciseId

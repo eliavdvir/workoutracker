@@ -60,7 +60,7 @@ function ExerciseInputs({ setExerciseInputsOpen, exercise, categoryId }) {
 
     if (existsAndNameChanged) {
       do {
-        theId = Math.floor(Math.random() * 100000) + 1
+        theId = (Math.floor(Math.random() * 100000) + 1).toString()
       } while (
         historyState.exercises.some((exercise) => exercise.exerciseId === theId)
       )

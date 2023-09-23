@@ -7,7 +7,7 @@ function AddCategory() {
   function addNewCategory() {
     let categoryId
     do {
-      categoryId = Math.floor(Math.random() * 1000) + 1
+      categoryId = (Math.floor(Math.random() * 1000) + 1).toString()
     } while (
       state.categories.some((category) => category.categoryId === categoryId)
     )
