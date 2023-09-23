@@ -1276,10 +1276,10 @@
   position: relative;
   left: 5%;
   width: 80%;
-  height: 7vh;
+  height: 12vh;
   font-size: 1.25rem;
   display: flex;
-  align-items: center;
+  padding-top: 15px;
 }
 .profile-container {
   position: absolute;
@@ -1288,6 +1288,7 @@
   width: 100vw;
   height: 94vh;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 .workout-input {
   position: absolute;
@@ -1918,7 +1919,7 @@
 .profile-exercises-filter {
   position: relative;
   height: 5%;
-  width: 100%;
+  width: 98%;
   top: 0;
   left: 0;
   z-index: 10;
