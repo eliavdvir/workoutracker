@@ -1,11 +1,13 @@
 import ExerciseInCategory from "./ExerciseInCategory"
 import { useContext, useState } from "react"
 import { DataContext } from "./DataProvider"
+import { HistoryContext } from "./DataProvider"
 import RemoveCategory from "./RemoveCategory"
 
 function CategoryOpened(props) {
   const { dispatch } = useContext(DataContext)
   const [removeDivOpen, setRemoveDivOpen] = useState(false)
+  const { historyState } = useContext(HistoryContext)
 
   function resetCategoryHeight(num) {
     props.setLayoutHeight(
