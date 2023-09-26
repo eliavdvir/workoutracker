@@ -45,6 +45,11 @@ const customStyles = {
     ...provided,
     height: "40px",
   }),
+  menu: (provided, state) => ({
+    ...provided,
+    maxHeight: "120px",
+    overflowY: "auto",
+  }),
 }
 
 function Exercise() {
