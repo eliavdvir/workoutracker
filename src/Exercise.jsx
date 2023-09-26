@@ -11,6 +11,16 @@ const options = [
   { value: "yellow", label: "yellow", img: "https://i.imgur.com/WXy5Rgx.png" },
   { value: "red", label: "red", img: "https://i.imgur.com/QuANDiZ.png" },
   { value: "black", label: "black", img: "https://i.imgur.com/Bmlxp5D.png" },
+  {
+    value: "blackred",
+    label: "blackred",
+    img: "https://i.imgur.com/k9d7NrQ.png",
+  },
+  {
+    value: "blackredylw",
+    label: "blackredylw",
+    img: "https://i.imgur.com/Xu4Ad2g.png",
+  },
 ]
 
 const CustomOption = ({ label, data, innerProps }) => (

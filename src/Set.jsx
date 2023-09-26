@@ -15,6 +15,10 @@ function Set({ set }) {
         setUrl("https://i.imgur.com/QuANDiZ.png")
       } else if (set.band === "black") {
         setUrl("https://i.imgur.com/Bmlxp5D.png")
+      } else if (set.band === "blackred") {
+        setUrl("https://i.imgur.com/k9d7NrQ.png")
+      } else if (set.band === "blackredylw") {
+        setUrl("https://i.imgur.com/Xu4Ad2g.png")
       }
       setisUrl(true)
     } else {
